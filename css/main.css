@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&family=Poiret+One&display=swap');
+
+:root{
+    --primary-color: #7C1C1C;
+    --secondary-color: #F6F6F4;
+    --text-color: rgba(124, 28, 28, 0.6);
+    --primary-font-family: 'Poiret One';
+    --secondary-font-family: 'Playfair Display';
+}
+*{
+    font-weight: 400; 
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: var(--primary-font-family);
+    text-decoration: none;
+    list-style: none;
+}
+.container{
+    max-width: 1206px;
+    margin: 0 auto;
+}
+.order__button{
+    background: var(--primary-color);
+    border: 0;
+    border-radius: 24px;
+    width: 187px;
+    height: 48px;
+    font-size: 16px;
+    color: #ffffff;
+    transition: all 0.3s;
+}
+.order__button:hover{
+    background-color: var(--text-color);
+}
+[class$='--title']{
+    font-size: 36px;
+    color: var(--text-color);
+}
+.logo{
+    font-family: var(--secondary-font-family);
+    font-size: 20px;
+    line-height: 27px;
+    margin-right: 18%;
+}
+.icon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.icon img{
+     width: 20%;
+     height: 10%;
+}
+@media screen and (max-width: 900px){
+    [class$='--title']{
+        font-size: 4vw;
+    }
+}
+@media screen and (max-width: 400px){
+    [class$='--title']{
+        font-size: 6vw;
+    }
+}

@@ -1,0 +1,110 @@
+header{
+    display: flex;
+    padding: 16px 0 16px 10%;
+    display: flex;
+    align-items: center;
+}
+.menu{
+    list-style-type: none;
+    display: flex;
+}
+.menu li a{
+   text-decoration: none;
+   font-size: 14px;
+   font-family: Helvetica;
+   color: #000000;
+   margin-left: 32px;
+   display: inline-block;
+   transition: all 0.5s;
+}
+.menu li a:hover{
+    color: var(--primary-color);
+    transform: translateY(-5px);
+}
+.menu-bar{
+    width: 2rem;
+    height:2rem;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 16px;
+    right: 30px;
+    z-index: 5;
+}
+.menu-bar .bar{
+    position: relative;
+    width: 100%;
+    height: 2px;
+    background-color: black;
+    border-radius: 2px;
+    transition: .5s; 
+}
+.bar::before, .bar::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    border-radius: 2px;
+    transition: 0.5s;
+}
+.bar::before{
+    transform: translateY(-8px);
+}
+.bar::after{
+    transform: translateY(8px);
+}
+nav.active .bar{
+    background-color: transparent;
+}
+nav.active .bar::before{
+    transform: translateY(0) rotate(-45deg);
+    background-color: black;
+}
+nav.active .bar::after{
+    transform: translateY(0) rotate(45deg);
+    background-color: black;
+}
+
+@media screen and (max-width: 900px){
+    .menu{
+        height: 100%;
+        width: 0;
+        position: fixed;
+        z-index: 10;
+        top: 0;
+        right: 0;
+        background-color: var(--secondary-color);
+        overflow-x: hidden;
+        transition: 0.3s;
+        flex-direction: column;
+        padding-top: 100px;
+    }
+    .menu-bar{
+        display: flex;
+    }
+    nav.active .menu-bar{
+        position: fixed;
+    }
+    nav.active .menu-back {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0,0,0,0.4);
+        transition: 0.3s;
+        z-index: 4;
+    }
+    nav.active .menu-back .menu{
+        width: 270px;
+    }
+    .menu li a{
+        font-size: 25px;
+        color: black;
+        width: 250px;
+        margin-bottom: 5vh;
+    }
+}
+

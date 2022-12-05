@@ -1,0 +1,127 @@
+.best__products{
+    padding: 9% 5% 6%;
+    width: 90%;
+    background-color: var(--secondary-color);
+    margin-bottom: 6%;
+    position: relative;
+}
+.best__products--title{
+    position: absolute;
+    top: 2%;
+    left: 3%;
+}
+.best__products__slider{
+    background-color: #ffffff;
+    width: 98%;
+    height: 353px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 0.6fr 2fr 2.2fr 2fr 0.6fr;
+}
+[class^='product__img'] img{
+    width: 100%;
+    height: 353px;
+    animation: changeOpacity  3s linear 0s 1;
+}
+@keyframes changeOpacity {
+    from{opacity: 0;}
+    to{opacity: 1;} 
+}
+.products__info{
+    width: 100%;
+    height: 90%;
+    background-color: var(--primary-color);
+    color: #ffffff;
+    transform: translateY(-10%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s;
+}
+.product__text{
+    width: 85%;
+}
+.product__text p,.products__info hr{
+    margin-bottom: 9%;
+}
+.products__info hr{
+    width: 80%;
+    height: 1px;
+    border: 0;
+    background-color: #ffffff;
+    border-radius: 5px;
+}
+.product__name{
+    font-size: 14px;
+}
+.product__description, .product__price{
+    width: 90%;
+    font-size: 11px;
+}
+.pagination{
+    margin-top: -6%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+}
+.pagination div{
+    background-color: var(--primary-color);
+    width: 8px;
+    height:  8px;
+    margin: 0 0.5%;
+    border-radius:  15px;
+    transition: .3s;
+}
+.pagination .active{
+    width: 13px;
+    height: 13px;
+}
+.product__back__img img{
+    display: none;
+    
+}
+
+@media screen and (max-width: 900px){
+    .best__products__slider{
+        grid-template-columns: auto 60vw auto;
+    }
+    [class^='product__img']{
+        display: none; 
+    }
+    .products__info{
+        transform: translateY(0%);
+        height: 100%;
+    }
+    .pagination{
+        margin-top: 5%;
+        height: 0;
+    }
+    .product__back__img {
+        height: 100%;
+        position: relative;
+    }
+    .product__back__img img{
+        width: 100%;
+        height: 70vw;
+        display: block;
+    }
+    .products__info{
+        height: 100%;
+        background-color: var(--text-color);
+        position: absolute;
+        top: 0;
+        left: 0; 
+    }
+    .best__products__slider{
+        height: auto;
+    }
+     .product__name{
+        font-size: 3.5vw;
+    }
+    .product__description, .product__price{
+        font-size: 2vw;
+    }
+}
+

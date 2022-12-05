@@ -1,0 +1,100 @@
+.order{
+    width: 100%;
+    height: auto;
+    background-color: var(--secondary-color);
+}
+.order>div{
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+}
+.order>div img{
+    width:  609px;
+    height: 536px;
+    margin: 0 3% 0 8%;
+    transform: translateY(8%);
+}
+.order__card{
+    width: 47%;
+}
+.order--title{
+    text-align: center;
+}
+.orderForm{
+    margin-top: 12%;
+    height: 325px;
+    border: 0;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+.orderForm input{
+    width: 100%;
+    height: 50px;
+    padding: 5%;
+    border-radius: 50px;
+    border: 0;
+    background-color: rgba(217, 217, 217, 0.6);
+    color: black;
+    font-size: 20px;
+}
+
+@media screen and (max-width: 900px){
+    .order>div{
+        flex-direction: column;
+        align-items: center;
+        overflow: hidden;
+        position: relative;
+        height: 500px;
+    
+    }
+    .order>div img{
+        width:  100%;
+        height: auto;
+        margin: 0;
+        transform: translateY(0);
+    }
+    .order__card{
+        width: 100%;
+        background-color: rgba(217, 217, 217,0.3);
+        height: 500px;
+        position: absolute;
+        top: 0;
+        padding: 0 10%;
+    }
+    .orderForm button{
+        margin: 0 auto;
+    }
+    .orderForm input{
+        background-color: rgba(217, 217, 217,0.8);
+        height: 8vw;
+    }
+    .orderForm input::placeholder{
+        color: black;
+    }
+    .order--title{
+       font-size: 7vw;
+    }
+    
+}
+@media screen and (max-width: 450px){
+    .order>div img, .order__card{
+        height: 400px;
+    }
+    .order--title{
+        font-size: 9vw;
+     }
+    .orderForm input{
+        height: 12vw;
+    }
+    .orderForm{
+        justify-content: center;
+    }
+    .order--title, #name, #phone{
+        margin-bottom: 10%;
+    }
+    .order__btn{
+        height: 35px;
+    }
+   
+}

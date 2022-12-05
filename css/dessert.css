@@ -1,0 +1,66 @@
+
+.desserts{
+    background-color: var(--secondary-color);
+    width: 100%;
+}
+.desserts .container{
+    width: 90%;
+    padding: 25px 0;
+}
+.desserts--title {
+    margin-left: 3%;
+}
+.desserts--title span::after{
+    content: "";
+    margin-right: 7.5%;  
+}
+.slider__scroll{
+    width: 100%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 0.3fr 3fr 0.3fr;
+}
+.slider__container{
+    overflow-x:auto;
+}
+::-webkit-scrollbar{width:0px;height:0px;}
+::-webkit-scrollbar-button{width:0px;height:0px;}
+
+
+.slider__track{
+    width: 90%;
+    height: 350px;
+    display: flex;
+    transition: all 0.3s;
+    justify-content: flex-start;
+    align-items: center;
+}
+.slider__item{
+    min-width: 27%;
+    height: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dessert__card{
+    background-color: white;
+    width: 90%;
+    box-sizing: border-box;
+    padding: 20px 21px;
+}
+.dessert__card__img img{
+    width: 100%;
+}
+.dessert__card__info{
+    display: flex;
+    justify-content: space-between;
+}
+.dessert__card__text > div{
+    margin-top: 14px;
+    font-size: 16px;
+}
+.dessert__card__add{
+    margin: auto 0;
+    width: 10%;
+}
