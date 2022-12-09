@@ -37,7 +37,7 @@
 }
 .slider__item{
     min-width: 27%;
-    height: 90%;
+    max-height: 90%;
     display: flex;
     align-items: center;
     justify-content: center;
